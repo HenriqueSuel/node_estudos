@@ -13,12 +13,10 @@ class CategoriesRepository implements ICategoryRepository {
 
     constructor() {
         this.repository = getRepository(Category);
-        console.log('passou cont', this.repository)
     }
 
 
     async create({ name, description }: ICreateCategoryDTO): Promise<void>  {
-        console.log('Chegou até aqui')
         const category = await this.repository.create({
             description,
             name
