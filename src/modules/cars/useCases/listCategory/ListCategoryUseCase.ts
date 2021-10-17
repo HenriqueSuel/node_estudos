@@ -1,6 +1,7 @@
+import { Category } from "@mdules/cars/infra/typeorm/entities/Category";
 import { inject, injectable } from "tsyringe";
-import { Category } from "../../entities/Category";
-import { ICategoryRepository } from "../../repositories/ICategoriesRepository";
+
+import { ICategoryRepository } from "../../infra/typeorm/repositories/ICategoriesRepository";
 
 @injectable()
 class ListCategoryUseCase {

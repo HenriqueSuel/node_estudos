@@ -1,7 +1,7 @@
+import { UsersRepository } from "@mdules/accounts/infra/typeorm/repositories/implementations/UsersRepository";
 import { NextFunction, Request, Response } from "express";
 import { verify } from 'jsonwebtoken';
-import { UsersRepository } from "../modules/accounts/repositories/implementations/UsersRepository";
-import { AppError } from '../erros/AppError';
+import { AppError } from '../../../erros/AppError';
 
 export async function ensureAuthenticated(request: Request, response: Response, next: NextFunction) {
     const authHeader = request.headers.authorization;

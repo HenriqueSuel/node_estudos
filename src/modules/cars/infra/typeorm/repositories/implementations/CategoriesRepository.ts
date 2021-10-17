@@ -23,6 +23,7 @@ class CategoriesRepository implements ICategoryRepository {
         })
 
         await this.repository.save(category)
+        
     }
 
     async list(): Promise<Category[]> {

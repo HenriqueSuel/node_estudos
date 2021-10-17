@@ -1,13 +1,18 @@
 import { container } from 'tsyringe';
-import { UsersRepository } from '../../modules/accounts/repositories/implementations/UsersRepository';
-import { IUsersRepository } from '../../modules/accounts/repositories/IUsersRepository';
-import { ICategoryRepository } from '../../modules/cars/repositories/ICategoriesRepository'
-import { CategoriesRepository } from '../../modules/cars/repositories/implementations/CategoriesRepository'
-import { SpecificationsRepository } from '../../modules/cars/repositories/implementations/SpecificationsRepository';
-import { ISpecificationsRepository } from '../../modules/cars/repositories/ISpecificationsRepository';
+import { UsersRepository } from '@mdules/accounts/infra/typeorm/repositories/implementations/UsersRepository';
+import { IUsersRepository } from '@mdules/accounts/infra/typeorm/repositories/IUsersRepository';
+import { ICategoryRepository } from '@mdules/cars/infra/typeorm/repositories/ICategoriesRepository';
+import { ISpecificationsRepository } from '@mdules/cars/infra/typeorm/repositories/ISpecificationsRepository';
+import { CategoriesRepository } from '@mdules/cars/infra/typeorm/repositories/implementations/CategoriesRepository';
+import { SpecificationsRepository } from '@mdules/cars/infra/typeorm/repositories/implementations/SpecificationsRepository';
+import { ICarsRepository } from '@mdules/cars/infra/typeorm/repositories/ICarsRepository';
+import { CarsRepository } from '@mdules/cars/infra/typeorm/repositories/implementations/CarsRepository';
+
 
 container.registerSingleton<ICategoryRepository>( "CategoriesRepository", CategoriesRepository)
 
 container.registerSingleton<ISpecificationsRepository>( "SpecificationsRepository", SpecificationsRepository)
 
 container.registerSingleton<IUsersRepository>( "UserRepository", UsersRepository)
+
+container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository)

@@ -1,4 +1,5 @@
-import { ICreateUserDTO } from "../dtos/ICreateUserDTO";
+
+import { ICreateUserDTO } from "@mdules/accounts/dtos/ICreateUserDTO";
 import { User } from "../entities/User";
 
 
