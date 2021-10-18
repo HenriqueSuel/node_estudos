@@ -7,12 +7,16 @@ import { CategoriesRepository } from '@mdules/cars/infra/typeorm/repositories/im
 import { SpecificationsRepository } from '@mdules/cars/infra/typeorm/repositories/implementations/SpecificationsRepository';
 import { ICarsRepository } from '@mdules/cars/infra/typeorm/repositories/ICarsRepository';
 import { CarsRepository } from '@mdules/cars/infra/typeorm/repositories/implementations/CarsRepository';
+import { ICarsImagesRepository } from '@mdules/cars/infra/typeorm/repositories/ICarsImagesRepository';
+import { CarsImagesRepository } from '@mdules/cars/infra/typeorm/repositories/implementations/CarsImagesRepository';
 
 
-container.registerSingleton<ICategoryRepository>( "CategoriesRepository", CategoriesRepository)
+container.registerSingleton<ICategoryRepository>( "CategoriesRepository", CategoriesRepository);
 
-container.registerSingleton<ISpecificationsRepository>( "SpecificationsRepository", SpecificationsRepository)
+container.registerSingleton<ISpecificationsRepository>( "SpecificationsRepository", SpecificationsRepository);
 
-container.registerSingleton<IUsersRepository>( "UserRepository", UsersRepository)
+container.registerSingleton<IUsersRepository>( "UserRepository", UsersRepository);
 
-container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository)
+container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);
+
+container.registerSingleton<ICarsImagesRepository>("CarsImagesRepository", CarsImagesRepository);
